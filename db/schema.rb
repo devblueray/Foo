@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130918024859) do
+ActiveRecord::Schema.define(version: 20130918035004) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -57,6 +57,15 @@ ActiveRecord::Schema.define(version: 20130918024859) do
   end
 
   add_index "galleries", ["customer_id"], name: "index_galleries_on_customer_id"
+
+  create_table "portraits", force: true do |t|
+    t.string   "attachment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "gallery_id"
+  end
+
+  add_index "portraits", ["gallery_id"], name: "index_portraits_on_gallery_id"
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"

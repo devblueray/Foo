@@ -1,2 +1,2 @@
 -@galleries.each do |g|
-	=g.name
+	=link_to g.name, gallery_portraits_path(g.id)
