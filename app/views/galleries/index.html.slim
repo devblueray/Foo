@@ -1,2 +1,3 @@
+=can_see_gallery?
 -@galleries.each do |g|
-	=link_to g.name, gallery_portraits_path(g.id)
+	=link_to g.name, customer_gallery_portraits_path(params[:customer_id],g.id)

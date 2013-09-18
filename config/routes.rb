@@ -1,9 +1,11 @@
 Foo::Application.routes.draw do
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-devise_for :customers   
-resources :galleries do
-	resources :portraits
+devise_for :customers 
+resources :customers do  
+	resources :galleries do
+		resources :portraits
+	end
 end
 
 # The priority is based upon order of creation: first created -> highest priority.

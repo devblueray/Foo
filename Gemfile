@@ -36,6 +36,7 @@ gem 'mini_magick'
 gem "devise"
 gem "carrierwave"
 gem "slim-rails"
+gem 'thin'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -46,4 +47,4 @@ gem "slim-rails"
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
