@@ -1,7 +1,7 @@
 class PortraitsController < ApplicationController
 	def index
 		@gallery =  Gallery.find(params[:gallery_id])
-		@portraits = @gallery.portraits
+		@portraits = @gallery.portraits.where(gallery_id: @gallery.id)
 		#@gallery = Gallery.where(customer_id: current_customer.id)
 		#@portraits = Portrait.where(gallery_id: params[:gallery_id])
 	end
