@@ -38,6 +38,7 @@ gem "carrierwave"
 gem "slim-rails"
 gem 'thin'
 gem 'fog'
+gem 'rmagick'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,4 +1,4 @@
 -can_see_portraits?
--@portraits.each do |p|
-	=p.attachment_url
+-@portraits.each do |portrait|
+	= link_to image_tag(portrait.attachment_url(:thumb)), portrait.attachment_url
 
