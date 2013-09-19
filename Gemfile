@@ -39,6 +39,7 @@ gem "slim-rails"
 gem 'thin'
 gem 'fog'
 gem 'rmagick'
+gem 'fancybox2-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

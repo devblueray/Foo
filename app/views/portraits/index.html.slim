@@ -1,4 +1,11 @@
 -can_see_portraits?
--@portraits.each do |portrait|
-	= link_to image_tag(portrait.attachment_url(:thumb)), portrait.attachment_url
+javascript:
+	$(document).ready(function() {
+		$(".fancybox").fancybox({
+			openEffect	: 'none',
+			closeEffect	:	'none'
+		});
+	});
 
+-@portraits.each do |portrait|
+	= link_to image_tag(portrait.attachment_url(:thumb)), portrait.attachment_url, :class=>"fancybox", :rel => 'gallery1'
