@@ -37,7 +37,7 @@ gem "devise"
 gem "carrierwave"
 gem "slim-rails"
 gem 'thin'
-gem 'fog'
+gem 'fog', '1.15.0'
 gem 'rmagick'
 gem 'fancybox2-rails'
 # Use ActiveModel has_secure_password
