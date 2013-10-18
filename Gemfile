@@ -36,7 +36,7 @@ gem 'mini_magick'
 gem "devise"
 gem "carrierwave"
 gem "slim-rails"
-gem 'thin'
+gem 'puma'
 gem 'fog', '1.15.0'
 gem 'rmagick'
 gem 'fancybox2-rails'
