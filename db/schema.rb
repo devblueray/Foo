@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20131018163923) do
     t.datetime "updated_at"
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "customers", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 20131018163923) do
     t.string   "phone2"
   end
 
-  add_index "customers", ["email"], name: "index_customers_on_email", unique: true
-  add_index "customers", ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
+  add_index "customers", ["email"], name: "index_customers_on_email", unique: true, using: :btree
+  add_index "customers", ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
 
   create_table "galleries", force: true do |t|
     t.string   "name"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20131018163923) do
     t.datetime "updated_at"
   end
 
-  add_index "galleries", ["customer_id"], name: "index_galleries_on_customer_id"
+  add_index "galleries", ["customer_id"], name: "index_galleries_on_customer_id", using: :btree
 
   create_table "portraits", force: true do |t|
     t.string   "attachment"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20131018163923) do
     t.integer  "gallery_id"
   end
 
-  add_index "portraits", ["gallery_id"], name: "index_portraits_on_gallery_id"
+  add_index "portraits", ["gallery_id"], name: "index_portraits_on_gallery_id", using: :btree
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
@@ -79,11 +79,11 @@ ActiveRecord::Schema.define(version: 20131018163923) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      limit: 2
-    t.integer  "year",       limit: 5
+    t.integer  "year",       limit: 8
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories"
+  add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
 
 end
