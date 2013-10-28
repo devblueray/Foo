@@ -40,7 +40,6 @@ gem 'puma'
 gem 'fog', '1.15.0'
 gem 'rmagick'
 gem 'fancybox2-rails'
-gem 'passenger'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
