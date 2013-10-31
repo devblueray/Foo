@@ -51,3 +51,4 @@ gem 'fancybox2-rails'
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+gem 'bootstrap-sass'
