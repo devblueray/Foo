@@ -1,7 +1,9 @@
-h1 Hello World
 - unless customer_signed_in?
-	=link_to "Sign In", new_customer_session_path, :class => 'btn btn-info'
+	=link_to "Sign In", new_customer_session_path, :class => 'btn btn-danger btn-large'
 -else
-	=link_to "Sign Out", destroy_customer_session_path, :method => :delete
-	br
-	=link_to "Galleries", customer_galleries_path(current_customer.id)
+	div class="col-md-1" =link_to "Sign Out", destroy_customer_session_path, :method => :delete, :class => 'btn btn-info btn-small'
+	p
+	=link_to "Galleries", customer_galleries_path(current_customer.id), :class => 'btn btn-danger btn-large'
+	
+
+	
